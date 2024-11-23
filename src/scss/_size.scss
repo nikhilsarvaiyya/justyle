@@ -1,0 +1,11 @@
+@mixin wh($size) {
+    width: $size;
+    height: $size;
+}
+@mixin btn($x,$y,$font,$wid:0) {
+    padding: $x $y !important;
+    font-size: $font !important;
+    @if $wid != 0 {
+        min-width: $wid !important;
+    }
+}
