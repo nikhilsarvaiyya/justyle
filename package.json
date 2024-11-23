@@ -1,0 +1,11 @@
+{
+  "name": "justyle",
+  "version": "1.0.0",
+  "description": "Only CSS stylesheet for customize webapp",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass -w src/justyle.scss:dist/css"
+  },
+  "author": "",
+  "license": "ISC"
+}
