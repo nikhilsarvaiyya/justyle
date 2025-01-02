@@ -1,0 +1,56 @@
+
+@use 'base';
+$count : 10;
+$red : base.$red;
+$orange : base.$orange;
+$yellow : base.$yellow;
+$green : base.$green;
+$blue : base.$blue;
+$indigo : base.$indigo;
+$vialot : base.$vialot;
+
+@mixin background {
+    @for $i from 0 through $count { 
+        $alpha : calc(($count - $i)/10);
+        ._bg_red_#{$i}00 {
+            background: rgba($red, $alpha);
+            color: base.$white;
+        }
+        ._bg_orange_#{$i}00 {
+            background: rgba($orange, $alpha);
+            color: base.$white;
+        }
+        ._bg_yellow_#{$i}00 {
+            background: rgba($yellow, $alpha);
+            color: base.$white;
+        }
+        ._bg_green_#{$i}00 {
+            background: rgba($green, $alpha);
+            color: base.$white;
+        }
+        ._bg_blue_#{$i}00 {
+            background: rgba($blue, $alpha);
+            color: base.$white;
+        }
+        ._bg_indigo_#{$i}00 {
+            background: rgba($indigo, $alpha);
+            color: base.$white;
+        }
+        ._bg_vialot_#{$i}00 {
+            background: rgba($vialot, $alpha);
+            color: base.$white;
+        }
+    }
+}
+
+._bg_black {
+    background: base.$black;
+}
+._bg_white {
+    background: base.$white;
+}
+
+@include background;
+
+
+

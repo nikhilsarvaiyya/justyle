@@ -1,0 +1,30 @@
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+._float_left {
+    float: left
+}
+
+._float_right {
+    float: right
+}
+
+._text-left {
+    text-align: left;
+}
+
+._text_right {
+    text-align: right;
+}
+
+
+._text_center {
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+
+$width: 100%;
+$division: 16;
+
+@mixin col {
+    @for $i from 1 through $division {
+        ._col_#{$i} {
+            width: calc($width / $i);
+            display: inline-block;
+            padding:0 8px;
+        }        
+    }
+}
+@include col;
+

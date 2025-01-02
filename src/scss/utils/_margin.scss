@@ -1,0 +1,11 @@
+
+$count : 10;
+@mixin margin {
+    @for $i from 1 through $count {
+        ._mar_#{$i} {
+            margin: $i+px;
+        }        
+    }
+}
+
+@include margin

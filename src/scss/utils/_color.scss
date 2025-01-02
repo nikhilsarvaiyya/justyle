@@ -1,0 +1,48 @@
+@use 'base';
+$count : 10;
+$red : base.$red;
+$orange : base.$orange;
+$yellow : base.$yellow;
+$green : base.$green;
+$blue : base.$blue;
+$indigo : base.$indigo;
+$vialot : base.$vialot;
+
+@mixin color {
+    @for $i from 0 through $count { 
+        $alpha : calc(($count - $i)/10);
+        ._clr_red_#{$i}00 {
+            color: rgba($red, $alpha);
+        }
+        ._clr_orange_#{$i}00 {
+            color: rgba($orange, $alpha);
+        }
+        ._clr_yellow_#{$i}00 {
+            color: rgba($yellow, $alpha);
+        }
+        ._clr_green_#{$i}00 {
+            color: rgba($green, $alpha);
+        }
+        ._clr_blue_#{$i}00 {
+            color: rgba($blue, $alpha);
+        }
+        ._clr_indigo_#{$i}00 {
+            color: rgba($indigo, $alpha);
+        }
+        ._clr_vialot_#{$i}00 {
+            color: rgba($vialot, $alpha);
+        }
+    }
+}
+
+._clr_black {
+    color: base.$black !important;
+}
+._clr_white {
+    color: base.$white !important;
+}
+
+@include color;
+
+
+

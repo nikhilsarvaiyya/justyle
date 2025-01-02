@@ -1,0 +1,66 @@
+@use 'base';
+$count : 10;
+
+@mixin border {
+    @for $i from 0 through $count {
+        ._border_#{$i} {
+            border-width: $i+px !important;
+        }
+    }
+}
+
+@include border;
+
+._border{
+    border:1px solid #ccc
+}
+._border_solid {
+    border-width:1px;
+    border-style: solid;
+}
+
+._border_dotted {
+    border-width:1px;
+    border-style: dotted;
+}
+
+._border_dashed {
+    border-width:1px;
+    border-style: dashed;
+}
+
+._border_red {
+    border-color: base.$red;
+}
+
+._border_green {
+    border-color: base.$green;
+}
+
+._border_blue {
+    border-color: base.$blue;
+}
+
+._border_orange {
+    border-color: base.$orange;
+}
+
+._border_indigo {
+    border-color: base.$indigo;
+}
+
+._border_violet {
+    border-color: base.$vialot;
+}
+
+._border_yellow {
+    border-color: base.$yellow;
+}
+
+._border_black {
+    border-color: base.$black;
+}
+
+._border_white {
+    border-color: base.$white;
+}

@@ -1,0 +1,65 @@
+$add: 9;
+$add-per: 0%;
+$add-pix: 0px;
+$add-em: 0em;
+$add-rem: 0rem;
+$add-vh: 0vh;
+
+@mixin add-height {
+    @for $i from 0 through $add {
+        ._h_pt_#{$i} {
+            height: $add-per + $i;
+        }
+
+        ._h_pi_#{$i} {
+            height: $add-pix + $i
+        }
+
+        ._h_em_#{$i} {
+            height: $add-em + $i
+        }
+
+        ._h_rem_#{$i} {
+            height: $add-rem + $i
+        }
+
+        ._h_vh_#{$i} {
+            height: $add-vh + $i
+        }
+    }
+}
+@include add-height;
+
+$multiple: 10;
+$multiple-per: 1%;
+$multiple-pix: 1px;
+$multiple-em: 1em;
+$multiple-rem: 1rem;
+$multiple-vh: 1vh;
+
+@mixin multiple-height {
+    @for $i from 1 through $multiple {
+        ._h_pt_#{$i * 10} {
+            height: $multiple-per * $i * 10;
+        }
+
+        ._h_pi_#{$i * 10} {
+            height: $multiple-pix * $i * 10
+        }
+
+        ._h_em_#{$i * 10} {
+            height: $multiple-em * $i * 10
+        }
+
+        ._h_rem_#{$i * 10} {
+            height: $multiple-rem * $i * 10
+        }
+
+        ._h_vh_#{$i * 10} {
+            height: $multiple-vh * $i * 10
+        }
+    }
+}
+
+
+@include multiple-height;

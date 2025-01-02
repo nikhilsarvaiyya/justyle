@@ -1,0 +1,11 @@
+
+$count : 10;
+@mixin padding {
+    @for $i from 1 through $count {
+        ._pad_#{$i} {
+            padding: $i+px;
+        }        
+    }
+}
+
+@include padding

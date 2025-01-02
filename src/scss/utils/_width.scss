@@ -1,0 +1,65 @@
+$add: 9;
+$add-per: 0%;
+$add-pix: 0px;
+$add-em: 0em;
+$add-rem: 0rem;
+$add-vh: 0vh;
+
+@mixin add-width {
+    @for $i from 0 through $add {
+        ._w_pt_#{$i} {
+            width: $add-per + $i;
+        }
+
+        ._w_pi_#{$i} {
+            width: $add-pix + $i
+        }
+
+        ._w_em_#{$i} {
+            width: $add-em + $i
+        }
+
+        ._w_rem_#{$i} {
+            width: $add-rem + $i
+        }
+
+        ._w_vh_#{$i} {
+            width: $add-vh + $i
+        }
+    }
+}
+@include add-width;
+
+$multiple: 10;
+$multiple-per: 1%;
+$multiple-pix: 1px;
+$multiple-em: 1em;
+$multiple-rem: 1rem;
+$multiple-vh: 1vh;
+
+@mixin multiple-width {
+    @for $i from 1 through $multiple {
+        ._w_pt_#{$i * 10} {
+            width: $multiple-per * $i * 10;
+        }
+
+        ._w_pi_#{$i * 10} {
+            width: $multiple-pix * $i * 10
+        }
+
+        ._w_em_#{$i * 10} {
+            width: $multiple-em * $i * 10
+        }
+
+        ._w_rem_#{$i * 10} {
+            width: $multiple-rem * $i * 10
+        }
+
+        ._w_vh_#{$i * 10} {
+            width: $multiple-vh * $i * 10
+        }
+    }
+}
+
+
+@include multiple-width;
